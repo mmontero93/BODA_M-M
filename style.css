@@ -1,0 +1,190 @@
+/* === Reset Básico y Variables === */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+    /* EDITAR: Colores (Invertidos respecto a la primera versión con wrapper) */
+    --color-text: #555;
+    --color-headings: #333;
+    --color-script: #444;
+    /* CAMBIO: Inner ahora es beige, Outer es blanco */
+    --color-background-inner: #fcfaf5; /* Beige muy pálido para el contenido central */
+    --color-background-outer: #ffffff; /* Blanco para el fondo exterior */
+    --color-border-light: #eee;
+    --color-icon: #777;
+    /* NO HAY --color-leaf-stroke porque usamos IMG */
+
+    /* EDITAR: Fuentes */
+    --font-script: 'Great Vibes', cursive;
+    --font-serif: 'Source Serif Pro', serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: var(--font-serif);
+    color: var(--color-text);
+    background-color: var(--color-background-outer); /* Fondo exterior (Ahora Blanco) */
+    line-height: 1.8;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* === Wrapper Central === */
+.content-wrapper {
+    background-color: var(--color-background-inner); /* Fondo interior (Ahora Beige) */
+    max-width: 900px; /* Volvemos al ancho original de esta versión */
+    margin: 2rem auto;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+h1, h2, .script-text {
+    font-family: var(--font-script); color: var(--color-script); font-weight: normal; margin-bottom: 1rem;
+}
+h1 { font-size: 2.8rem; margin-bottom: 0.5rem; line-height: 1.2; }
+h2 { font-size: 3.5rem; margin-bottom: 2rem; }
+p { margin-bottom: 1rem; font-size: 0.95rem; }
+
+.section {
+    padding: 4rem 1rem; position: relative; max-width: 600px; margin: 0 auto;
+}
+
+/* === Ilustraciones IMG de Hojas === */
+.leaf-art {
+    position: absolute;
+    opacity: 0.6;
+    pointer-events: none;
+    max-width: 150px;
+    height: auto;
+    z-index: 1;
+     /* Quitar estilos SVG */
+     /* fill: none; stroke: var(--color-leaf-stroke); stroke-width: 0.5px; etc */
+}
+/* Ajustes de tamaño específicos */
+.leaf-top, .leaf-bottom { max-width: 250px; z-index: 0;}
+.leaf-circle-frame { max-width: 350px; opacity: 0.4;}
+.leaf-separator { position: static; display: block; margin: 1.5rem auto; opacity: 0.5; max-width: 80px; }
+.leaf-footer-left, .leaf-footer-right { max-width: 100px; opacity: 0.4;}
+/* Posicionamiento (igual que antes) */
+.leaf-top { top: 10px; left: 50%; transform: translateX(-50%); }
+.leaf-bottom { bottom: 10px; left: 50%; transform: translateX(-50%); }
+.leaf-circle-frame { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.leaf-swirl-top { top: 2rem; right: 1rem; }
+.leaf-swirl-bottom { bottom: 2rem; left: 1rem; }
+.leaf-top-right { top: 2.5rem; right: 0rem; }
+.leaf-bottom-left { bottom: 2.5rem; left: 0rem; }
+.leaf-footer-left { bottom: 1rem; left: 1rem; }
+.leaf-footer-right { top: 1rem; right: 1rem; }
+
+
+/* === Sección Hero (Pag 1) === */
+.hero-section { padding: 2rem 1rem 3rem; position: relative; min-height: 70vh; display: flex; flex-direction: column; align-items: center; }
+.hero-image-container { width: 80%; max-width: 350px; margin-top: 3rem; margin-bottom: 3rem; position: relative; clip-path: ellipse(120% 100% at 50% 100%); overflow: hidden; z-index: 2; }
+.hero-photo { display: block; width: 100%; height: auto; }
+.hero-names { margin-top: -1rem; position: relative; z-index: 3; }
+.hero-names p { font-family: var(--font-serif); font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; color: #999; margin: 0; }
+
+/* === Sección Fecha (Pag 2) === */
+.date-section { padding-top: 6rem; padding-bottom: 6rem; position: relative; }
+.initials-circle {
+    width: 180px; height: 180px; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto 1.5rem auto; position: relative; z-index: 2;
+    /* Fondo blanco para contrastar con el wrapper beige */
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+.initials-circle span { font-family: var(--font-serif); font-size: 4.5rem; font-weight: 600; color: var(--color-headings); line-height: 1; margin: 0 0.2rem; }
+.date-text p { font-family: var(--font-serif); font-size: 1rem; font-weight: 400; letter-spacing: 1px; text-transform: uppercase; color: var(--color-text); margin-bottom: 0.2rem; position: relative; z-index: 2; }
+
+/* === Sección Invitación (Pag 3) === */
+.invitation-section .script-text { font-size: 1.8rem; line-height: 1.6; color: var(--color-script); }
+
+/* === Secciones Evento (Pag 4, 5) === */
+.event-section .venue-name { font-family: var(--font-serif); font-size: 1.1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-top: -1rem; margin-bottom: 1.5rem; color: var(--color-headings); }
+.event-section .address { font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem; }
+
+/* === Links con Icono (Mapa, RSVP, etc.) === */
+.icon-link { display: inline-flex; flex-direction: column; align-items: center; text-decoration: none; color: var(--color-text); font-size: 0.8rem; }
+.icon-link .icon { font-size: 2.5rem; margin-bottom: 0.3rem; color: var(--color-icon); }
+.icon-link:hover .icon { color: var(--color-headings); transform: scale(1.1); transition: transform 0.2s ease; }
+.icon-link-button { background: none; border: none; cursor: pointer; padding: 0; }
+
+/* === Sección RSVP (Pag 6) === */
+.rsvp-section p { margin-bottom: 1.5rem; }
+
+/* === Sección Contador === */
+.countdown-section { padding: 2rem 1rem 0; }
+.countdown-timer { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 0; flex-wrap: wrap; }
+.countdown-timer div { font-family: var(--font-serif); color: var(--color-text); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+.countdown-timer span { display: block; font-size: 2rem; font-weight: 600; color: var(--color-headings); margin-bottom: 0.2rem; }
+
+/* === Sección Regalo (Pag 7) === */
+.gift-section { padding-top: 3rem; }
+.gift-section h2 { margin-bottom: 1.5rem; }
+.gift-section p { margin-bottom: 1.5rem; }
+.iban-text { font-family: var(--font-serif); font-size: 1.1rem; font-weight: 600; color: var(--color-headings); margin-bottom: 1rem; letter-spacing: 1px; }
+.copy-feedback { display: block; margin-top: 0.5rem; font-size: 0.8rem; color: green; height: 1em; }
+
+/* === Sección Itinerario (Pag 8) === */
+.itinerary-list { list-style: none; padding: 0; margin: 0; display: inline-block; text-align: left; }
+.itinerary-list li { margin-bottom: 1rem; font-size: 0.95rem; display: flex; align-items: center; }
+.itinerary-list .icon { font-size: 1.5rem; margin-right: 1rem; color: var(--color-icon); width: 25px; text-align: center; }
+
+/* === Sección Fotos (Pag 9) === */
+.photos-section p { margin-bottom: 1.5rem; }
+
+/* === Sección Final (Pag 10) === */
+.footer-section { padding: 3rem 1rem; position: relative; overflow: hidden; }
+.footer-names { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 600; letter-spacing: 2px; color: var(--color-headings); text-transform: uppercase; margin-bottom: 0.5rem; }
+.footer-message { font-family: var(--font-serif); font-size: 0.9rem; color: var(--color-text); letter-spacing: 1px; }
+.footer-section .leaf-art { opacity: 0.4; }
+
+
+/* === Responsividad === */
+@media (max-width: 920px) { /* Punto donde el wrapper empieza a ser < 100% */
+    .content-wrapper {
+        margin: 0 auto;
+        max-width: 100%;
+        box-shadow: none;
+    }
+}
+
+/* Resto de Media Queries (iguales que la versión anterior al SVG) */
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 3rem; }
+    .section { padding: 3rem 1rem; }
+    .leaf-art { max-width: 120px; }
+    .leaf-top, .leaf-bottom { max-width: 200px; }
+    .leaf-circle-frame { max-width: 300px; }
+    .initials-circle { width: 150px; height: 150px; }
+    .initials-circle span { font-size: 3.5rem; }
+    .countdown-timer { gap: 1rem; }
+    .countdown-timer span { font-size: 1.5rem; }
+}
+
+@media (max-width: 480px) {
+    body { font-size: 15px; }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 2.5rem; }
+    .section { padding: 2.5rem 1rem; }
+    .hero-image-container { width: 90%; margin-top: 2rem; margin-bottom: 2rem;}
+    .leaf-art { max-width: 100px; }
+    .leaf-top, .leaf-bottom { max-width: 180px; }
+    .leaf-circle-frame { max-width: 250px; }
+    .initials-circle { width: 120px; height: 120px; }
+    .initials-circle span { font-size: 3rem; }
+    .invitation-section .script-text { font-size: 1.5rem; }
+    .countdown-section { padding: 1.5rem 1rem 0; }
+    .countdown-timer { gap: 0.5rem; flex-direction: column; align-items: center;}
+    .countdown-timer div { margin-bottom: 0.5rem; }
+    .countdown-timer span { font-size: 1.8rem; }
+    .gift-section { padding-top: 2rem; }
+    .itinerary-list { display: block; text-align: center;}
+    .itinerary-list li { justify-content: center;}
+    .footer-names { font-size: 1rem; }
+    .footer-message { font-size: 0.8rem; }
+    .leaf-footer-left, .leaf-footer-right { max-width: 80px; }
+}
