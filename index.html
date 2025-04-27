@@ -3,31 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- EDITAR: Título que aparecerá en la pestaña del navegador -->
+    <!-- Título (Ya editado por ti) -->
     <title>Nuestra Boda - Maria & Mauricio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- EDITAR: Puedes cambiar las fuentes de Google Fonts si lo deseas -->
+    <!-- Fuentes (Ya editadas por ti) -->
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Source+Serif+Pro:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Wrapper con el fondo beige -->
-    <div class="content-wrapper">
+    <!-- === INICIO: NUEVA ESTRUCTURA DEL SOBRE === -->
+    <div id="envelope-container">
+        <div class="envelope-back"></div>
+        <div class="envelope-card">
+            <!-- EDITAR: Texto que se ve inicialmente en la tarjeta (Puedes usar tus nombres) -->
+            <p class="card-greeting">Queridos amigos y familiares,</p>
+            <h2 class="card-names">Maria & Mauricio</h2>
+            <p class="card-subtitle">Tenemos algo que contaros...</p>
+        </div>
+        <div class="envelope-flap">
+            <p class="flap-text">Haz clic para abrir</p>
+        </div>
+    </div>
+    <!-- === FIN: NUEVA ESTRUCTURA DEL SOBRE === -->
+
+
+    <!-- === INICIO: NUEVA ETIQUETA DE AUDIO === -->
+    <audio loop id="background-music">
+         <!-- EDITAR: Cambia la ruta a tu archivo de música (ej. music/cancion_fondo.mp3) -->
+        <source src="music/cancion_fondo.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+    <!-- === FIN: NUEVA ETIQUETA DE AUDIO === -->
+
+
+    <!-- Wrapper con tu contenido (AÑADIDA CLASE 'hidden') -->
+    <div class="content-wrapper hidden">
 
         <!-- === Sección Principal (Hero - Pag 1) === -->
         <header class="hero-section">
-             <!-- EDITAR: Asegúrate de tener 'images/leaf-top.png' o cambia la ruta -->
+             <!-- Tus imágenes actuales (Asegúrate que las rutas sean correctas) -->
             <img src="images/leaf-top.png" alt="" class="leaf-art leaf-top">
             <div class="hero-image-container">
-                 <!-- EDITAR: Cambia 'hero-photo.jpg' por el nombre de tu foto principal -->
+                 <!-- Tu foto principal (Asegúrate que la ruta 'hero-photo.jpg' es correcta o ajústala a 'images/hero-photo.jpg') -->
                 <img src="hero-photo.jpg" alt="Maria y Mauricio" class="hero-photo">
             </div>
-             <!-- EDITAR: Asegúrate de tener 'images/leaf-bottom.png' o cambia la ruta -->
             <img src="images/leaf-bottom.png" alt="" class="leaf-art leaf-bottom">
             <div class="hero-names">
-                 <!-- EDITAR: Nombres de la pareja -->
+                 <!-- Tus nombres -->
                 <h1>Maria & Mauricio</h1>
                 <p>NOS CASAMOS</p>
             </div>
@@ -36,15 +60,12 @@
         <main>
             <!-- === Sección Fecha (Pag 2) === -->
             <section class="section date-section">
-                 <!-- EDITAR: Asegúrate de tener 'images/leaf-circle-frame.png' o cambia la ruta -->
                 <img src="images/leaf-circle-frame.png" alt="" class="leaf-art leaf-circle-frame">
                 <div class="initials-circle">
-                     <!-- EDITAR: Iniciales -->
-                    <span>M</span>
-                    <span>M</span>
+                    <span>M</span> <span>M</span>
                 </div>
                 <div class="date-text">
-                     <!-- EDITAR: Fecha y Hora -->
+                    <!-- Tu fecha y hora -->
                     <p>VIERNES 3 DE OCTUBRE</p>
                     <p>DE 2025 | 18:30h</p>
                 </div>
@@ -52,9 +73,7 @@
 
             <!-- === Sección Invitación (Pag 3) === -->
             <section class="section invitation-section">
-                 <!-- EDITAR: Asegúrate de tener 'images/leaf-swirl-top.png' o cambia la ruta -->
                 <img src="images/leaf-swirl-top.png" alt="" class="leaf-art leaf-swirl-top">
-                 <!-- EDITAR: Texto de la invitación -->
                 <p class="script-text">
                     Vamos a celebrar<br>
                     el día más especial<br>
@@ -62,64 +81,53 @@
                     y deseamos que<br>
                     nos acompañéis
                 </p>
-                 <!-- EDITAR: Asegúrate de tener 'images/leaf-swirl-bottom.png' o cambia la ruta -->
                 <img src="images/leaf-swirl-bottom.png" alt="" class="leaf-art leaf-swirl-bottom">
             </section>
 
             <!-- === Sección Ceremonia (Pag 4) === -->
             <section id="ceremonia" class="section event-section">
-                 <!-- EDITAR: Asegúrate de tener 'images/leaf-top-right.png' o cambia la ruta -->
                 <img src="images/leaf-top-right.png" alt="" class="leaf-art leaf-top-right">
                 <h2>Ceremonia</h2>
-                 <!-- EDITAR: Nombre del lugar de la ceremonia -->
                 <p class="venue-name">PARROQUIA DE <br>SANTA CRSITINA</p>
-                 <!-- EDITAR: Asegúrate de tener 'images/leaf-separator.png' o cambia la ruta -->
                 <img src="images/leaf-separator.png" alt="" class="leaf-art leaf-separator">
-                 <!-- EDITAR: Dirección completa y hora de la ceremonia -->
                 <p class="address">
                     Paseo de Extremadura 32,<br>
                     28011 Madrid<br>
                     18:30 h
                 </p>
-                 <!-- EDITAR: Pon aquí el enlace de Google Maps para la ceremonia -->
                 <a href="https://www.google.com/maps/place/Parish+of+St+Christina/@40.4136247,-3.7279009,18.29z/data=!4m6!3m5!1s0xd42280a24334a39:0xb7c893884bc48ce4!8m2!3d40.413907!4d-3.728242!16s%2Fg%2F11bwdr1dz6?entry=ttu&g_ep=EgoyMDI1MDQyMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="icon-link">
-                    <span class="icon">📍</span> (clic) <!-- Puedes cambiar el icono si usas una imagen -->
+                    <span class="icon">📍</span> (clic)
                 </a>
-                 <!-- EDITAR: Asegúrate de tener 'images/leaf-bottom-left.png' o cambia la ruta -->
                 <img src="images/leaf-bottom-left.png" alt="" class="leaf-art leaf-bottom-left">
             </section>
 
             <!-- === Sección Celebración (Pag 5) === -->
             <section id="celebracion" class="section event-section">
-                <img src="images/leaf-swirl-top.png" alt="" class="leaf-art leaf-swirl-top"> <!-- Reutilizada -->
+                <img src="images/leaf-swirl-top.png" alt="" class="leaf-art leaf-swirl-top">
                 <h2>Celebración</h2>
-                 <!-- EDITAR: Nombre del lugar de la celebración -->
                 <p class="venue-name">Casa de Burgos</p>
-                <img src="images/leaf-separator.png" alt="" class="leaf-art leaf-separator"> <!-- Reutilizada -->
-                 <!-- EDITAR: Dirección completa y hora de la celebración -->
+                <img src="images/leaf-separator.png" alt="" class="leaf-art leaf-separator">
                 <p class="address">
                     Calle Principal de Provincias 3,<br>
                     Moncloa-Aravaca, 28011 Madrid<br>
                     21:00 h
                 </p>
-                 <!-- EDITAR: Pon aquí el enlace de Google Maps para la celebración -->
                 <a href="https://www.google.com/maps/place/Casa+de+Burgos/@40.4145994,-3.7306093,19z/data=!4m6!3m5!1s0xd422809aacbec27:0x55c51b64e7649f83!8m2!3d40.4144639!4d-3.7308012!16s%2Fg%2F11bwg45zdr?entry=ttu&g_ep=EgoyMDI1MDQyMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="icon-link">
-                    <span class="icon">📍</span> (clic) <!-- Puedes cambiar el icono -->
+                    <span class="icon">📍</span> (clic)
                 </a>
-                <img src="images/leaf-swirl-bottom.png" alt="" class="leaf-art leaf-swirl-bottom"> <!-- Reutilizada -->
+                <img src="images/leaf-swirl-bottom.png" alt="" class="leaf-art leaf-swirl-bottom">
             </section>
 
             <!-- === Sección RSVP (Pag 6) === -->
             <section id="rsvp" class="section rsvp-section">
-                <img src="images/leaf-top-right.png" alt="" class="leaf-art leaf-top-right"> <!-- Reutilizada -->
+                <img src="images/leaf-top-right.png" alt="" class="leaf-art leaf-top-right">
                 <h2>Confirmar asistencia</h2>
-                 <!-- EDITAR: Texto sobre la confirmación, incluye fecha límite si quieres -->
+                 <!-- EDITAR: Pon tu fecha límite y enlace de Google Form -->
                 <p>Haz clic en el sobre para<br>confirmar tu presencia antes del [FECHA LIMITE]</p>
-                 <!-- EDITAR: Pon aquí el enlace a tu formulario de Google Forms -->
                 <a href="[ENLACE_A_TU_GOOGLE_FORM]" target="_blank" class="icon-link">
-                    <span class="icon">✉️</span> (clic) <!-- Puedes cambiar el icono -->
+                    <span class="icon">✉️</span> (clic)
                 </a>
-                <img src="images/leaf-bottom-left.png" alt="" class="leaf-art leaf-bottom-left"> <!-- Reutilizada -->
+                <img src="images/leaf-bottom-left.png" alt="" class="leaf-art leaf-bottom-left">
             </section>
 
              <!-- === Sección Contador (Pag 7 - Arriba) === -->
@@ -134,9 +142,8 @@
 
             <!-- === Sección Regalo (Pag 7 - Abajo) === -->
             <section id="regalo" class="section gift-section">
-                <img src="images/leaf-top-right.png" alt="" class="leaf-art leaf-top-right"> <!-- Reutilizada -->
+                <img src="images/leaf-top-right.png" alt="" class="leaf-art leaf-top-right">
                 <h2>Regalo</h2>
-                 <!-- EDITAR: Tu texto preferido sobre los regalos -->
                 <p>
                     Lo más importante es<br>
                     tu presencia, pero<br>
@@ -144,36 +151,34 @@
                     puedes hacerlo en un sobre<br>
                     o en esta cuenta
                 </p>
-                 <!-- EDITAR: Tu número de cuenta IBAN -->
+                 <!-- Tu IBAN -->
                 <p id="iban" class="iban-text">ES11 1111 2222 3333 4444 5555 6666</p>
                 <button id="copy-iban-button" class="icon-link icon-link-button" title="Copiar IBAN">
-                    <span class="icon">📋</span> (clic para copiar) <!-- Puedes cambiar el icono -->
+                    <span class="icon">📋</span> (clic para copiar)
                 </button>
-                <img src="images/leaf-bottom-left.png" alt="" class="leaf-art leaf-bottom-left"> <!-- Reutilizada -->
+                <img src="images/leaf-bottom-left.png" alt="" class="leaf-art leaf-bottom-left">
                 <span id="copy-feedback" class="copy-feedback"></span>
             </section>
 
             <!-- === Sección Itinerario (Pag 8) === -->
             <section id="itinerario" class="section itinerary-section">
-                <img src="images/leaf-top-right.png" alt="" class="leaf-art leaf-top-right"> <!-- Reutilizada -->
+                <img src="images/leaf-top-right.png" alt="" class="leaf-art leaf-top-right">
                 <h2>Itinerario</h2>
-                 <!-- EDITAR: Los eventos y horas de tu boda -->
+                 <!-- Tu itinerario -->
                 <ul class="itinerary-list">
                     <li><span class="icon">⛪</span> 20:00 h - Ceremonia</li>
                     <li><span class="icon">🥂</span> 21:00 h - Recepción</li>
                     <li><span class="icon">🍽️</span> 22:30 h - Cena</li>
                     <li><span class="icon">🎶</span> 00:30 h - Apertura del baile</li>
                     <li><span class="icon">🚌</span> 06:00 h - Fin de fiesta</li>
-                     <!-- Puedes añadir o quitar elementos <li> según necesites -->
                 </ul>
-                <img src="images/leaf-bottom-left.png" alt="" class="leaf-art leaf-bottom-left"> <!-- Reutilizada -->
+                <img src="images/leaf-bottom-left.png" alt="" class="leaf-art leaf-bottom-left">
             </section>
 
             <!-- === Sección Fotos (Pag 9) === -->
             <section id="fotos" class="section photos-section">
-                <img src="images/leaf-swirl-top.png" alt="" class="leaf-art leaf-swirl-top"> <!-- Reutilizada -->
+                <img src="images/leaf-swirl-top.png" alt="" class="leaf-art leaf-swirl-top">
                 <h2>Fotos</h2>
-                 <!-- EDITAR: Tu texto sobre compartir fotos -->
                 <p>
                     El día de la boda<br>
                     toma muchas fotos<br>
@@ -182,23 +187,20 @@
                     haciendo clic en el icono<br>
                     de la camara de fotos
                 </p>
-                 <!-- EDITAR: Enlace a Wedshoots, Google Photos compartido, o donde quieras que suban/vean fotos -->
+                 <!-- EDITAR: Tu enlace para fotos -->
                 <a href="[ENLACE_PARA_SUBIR_O_VER_FOTOS]" target="_blank" class="icon-link">
-                    <span class="icon">📷</span> (clic) <!-- Puedes cambiar el icono -->
+                    <span class="icon">📷</span> (clic)
                 </a>
-                <img src="images/leaf-swirl-bottom.png" alt="" class="leaf-art leaf-swirl-bottom"> <!-- Reutilizada -->
+                <img src="images/leaf-swirl-bottom.png" alt="" class="leaf-art leaf-swirl-bottom">
             </section>
 
         </main>
 
         <!-- === Sección Final (Pag 10) === -->
         <footer class="footer-section">
-             <!-- EDITAR: Asegúrate de tener 'images/leaf-footer-left.png' o cambia la ruta -->
             <img src="images/leaf-footer-left.png" alt="" class="leaf-art leaf-footer-left">
-             <!-- EDITAR: Nombres de la pareja -->
             <p class="footer-names">MARIA & MAURICIO</p>
             <p class="footer-message">♥ OS ESPARAMOS EN ♥</p>
-             <!-- EDITAR: Asegúrate de tener 'images/leaf-footer-right.png' o cambia la ruta -->
             <img src="images/leaf-footer-right.png" alt="" class="leaf-art leaf-footer-right">
         </footer>
 
