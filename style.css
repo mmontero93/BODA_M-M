@@ -179,8 +179,8 @@ p { margin-bottom: 1rem; font-size: 0.95rem; }
 .rsvp-section p { margin-bottom: 1.5rem; }
 .countdown-section { padding: 2rem 1rem 0; }
 .countdown-timer { display: flex; justify-content: center; gap: 0.8rem; margin-bottom: 0; flex-wrap: wrap; }
-.countdown-timer div { font-family: var(--font-serif); color: var(--color-text); font-size: 0.6rem; text-transform: uppercase; letter-spacing: 1px; }
-.countdown-timer span { display: block; font-size: 1rem; font-weight: 600; color: var(--color-headings); margin-bottom: 0.2rem; }
+.countdown-timer div { font-family: var(--font-serif); color: var(--color-text); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; }
+.countdown-timer span { display: block; font-size: 1.5rem; font-weight: 600; color: var(--color-headings); margin-bottom: 0.2rem; }
 .gift-section { padding-top: 3rem; }
 .gift-section h2 { margin-bottom: 1.5rem; }
 .gift-section p { margin-bottom: 1.5rem; }
@@ -201,11 +201,11 @@ p { margin-bottom: 1rem; font-size: 0.95rem; }
 /* body.content-visible { ... } */
 
 @media (max-width: 920px) { .content-wrapper.visible { max-width: 100%; box-shadow: none; margin: 0 auto; } }
-@media (max-width: 768px) { h1 { font-size: 2.5rem; } h2 { font-size: 3rem; } .section { padding: 3rem 1rem; } .leaf-art { max-width: 120px; } .leaf-top, .leaf-bottom { max-width: 200px; } .leaf-circle-frame { max-width: 300px; } .initials-circle { width: 150px; height: 150px; } .initials-circle span { font-size: 3.5rem; } .countdown-timer { gap: 1rem; } .countdown-timer span { font-size: 1.5rem; } }
+@media (max-width: 768px) { h1 { font-size: 2.5rem; } h2 { font-size: 3rem; } .section { padding: 3rem 1rem; } .leaf-art { max-width: 120px; } .leaf-top, .leaf-bottom { max-width: 200px; } .leaf-circle-frame { max-width: 300px; } .initials-circle { width: 150px; height: 150px; } .initials-circle span { font-size: 3.5rem; } .countdown-timer { gap: 1rem; } .countdown-timer span { font-size: 1rem; } }
 @media (max-width: 480px) {
     #envelope-container { width: 280px; height: 180px; } /* Ajustar sobre en móvil */
     .envelope-card .card-names { font-size: 1.5rem;}
     .flap-text { font-size: 0.8rem; }
     /* ... (resto de tus estilos responsivos) ... */
-     body { font-size: 15px; } h1 { font-size: 2rem; } h2 { font-size: 2.5rem; } .section { padding: 2.5rem 1rem; } .hero-image-container { width: 90%; margin-top: 2rem; margin-bottom: 2rem;} .leaf-art { max-width: 100px; } .leaf-top, .leaf-bottom { max-width: 180px; } .leaf-circle-frame { max-width: 250px; } .initials-circle { width: 120px; height: 120px; } .initials-circle span { font-size: 3rem; } .invitation-section .script-text { font-size: 1.5rem; } .countdown-section { padding: 1.5rem 1rem 0; } .countdown-timer { gap: 0.5rem; flex-direction: column; align-items: center;} .countdown-timer div { margin-bottom: 0.5rem; } .countdown-timer span { font-size: 1.8rem; } .gift-section { padding-top: 2rem; } .itinerary-list { display: block; text-align: center;} .itinerary-list li { justify-content: center;} .footer-names { font-size: 1rem; } .footer-message { font-size: 0.8rem; } .leaf-footer-left, .leaf-footer-right { max-width: 80px; }
+     body { font-size: 15px; } h1 { font-size: 2rem; } h2 { font-size: 2.5rem; } .section { padding: 2.5rem 1rem; } .hero-image-container { width: 90%; margin-top: 2rem; margin-bottom: 2rem;} .leaf-art { max-width: 100px; } .leaf-top, .leaf-bottom { max-width: 180px; } .leaf-circle-frame { max-width: 250px; } .initials-circle { width: 120px; height: 120px; } .initials-circle span { font-size: 3rem; } .invitation-section .script-text { font-size: 1.5rem; } .countdown-section { padding: 1.5rem 1rem 0; } .countdown-timer { gap: 0.5rem;} .countdown-timer div { margin-bottom: 0.5rem; } .countdown-timer span { font-size: 1rem; } .gift-section { padding-top: 2rem; } .itinerary-list { display: block; text-align: center;} .itinerary-list li { justify-content: center;} .footer-names { font-size: 1rem; } .footer-message { font-size: 0.8rem; } .leaf-footer-left, .leaf-footer-right { max-width: 80px; }
 }
