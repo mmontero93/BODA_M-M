@@ -156,8 +156,10 @@ p { margin-bottom: 1rem; font-size: 0.95rem; }
 .leaf-circle-frame { top: 42%; left: 50%; transform: translate(-50%, -50%); }
 .leaf-swirl-top { top: 2rem; right: 1rem; }
 .leaf-swirl-bottom { bottom: 2rem; left: 1rem; }
-.leaf-top-right { top: 2.5rem; right: 0rem; }
-.leaf-bottom-left { bottom: 2.5rem; left: 0rem; }
+.leaf-top-right { top: 2.5rem; right: 1rem; }
+.leaf-bottom-left { bottom: 2.5rem; left: 1rem; }
+.leaf-top-right { max-width: 120px; z-index: 0; }
+.leaf-bottom-left { max-width: 120px; z-index: 0; }
 .leaf-footer-left { bottom: 1rem; left: 1rem; }
 .leaf-footer-right { bottom: 1rem; right: 1rem; }
 .hero-section { padding: 2rem 1rem 3rem; position: relative; min-height: 70vh; display: flex; flex-direction: column; align-items: center; }
