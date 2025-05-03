@@ -145,14 +145,14 @@ p { margin-bottom: 1rem; font-size: 0.95rem; }
 .section {padding: 4rem 1rem; position: relative; max-width: 600px; margin: 0 auto;}
 .leaf-art {position: absolute; opacity: 0.6; pointer-events: none; max-width: 150px; height: auto; z-index: 1;}
 .leaf-top { max-width: 200px; z-index: 0;} 
-.leaf-bottom-1 { max-width: 95px; z-index: 0;}
-.leaf-bottom-2 { max-width: 100px; z-index: 0;}
+.leaf-bottom-1 { max-width: 350px; z-index: 0;}
+/*.leaf-bottom-2 { max-width: 100px; z-index: 0;}*/
 .leaf-circle-frame { max-width: 450px; opacity: 0.4;}
 .leaf-separator { position: static; display: block; margin: 1.5rem auto; opacity: 0.5; max-width: 100px; }
 .leaf-footer-left, .leaf-footer-right { max-width: 100px; opacity: 0.4;}
 .leaf-top { top: 10px; left: 50%; transform: translateX(-50%); }
-.leaf-bottom-1 { bottom: 6%; left: 64%; transform: translateX(-50%); }
-.leaf-bottom-2 { bottom: 6%; right: 52%; transform: translateX(-50%); }
+.leaf-bottom-1 { bottom: 6%; left: 50%; transform: translateX(-50%); }
+/*.leaf-bottom-2 { bottom: 6%; right: 52%; transform: translateX(-50%); }*/
 .leaf-circle-frame { top: 42%; left: 50%; transform: translate(-50%, -50%); }
 .leaf-swirl-top { top: 2rem; right: 1rem; }
 .leaf-swirl-bottom { bottom: 2rem; left: 1rem; }
