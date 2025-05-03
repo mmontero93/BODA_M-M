@@ -144,19 +144,20 @@ h2 { font-size: 3.5rem; margin-bottom: 2rem; }
 p { margin-bottom: 1rem; font-size: 0.95rem; }
 .section {padding: 4rem 1rem; position: relative; max-width: 600px; margin: 0 auto;}
 .leaf-art {position: absolute; opacity: 0.6; pointer-events: none; max-width: 150px; height: auto; z-index: 1;}
-.leaf-top, .leaf-bottom { max-width: 250px; z-index: 0;}
-.leaf-circle-frame { max-width: 350px; opacity: 0.4;}
-.leaf-separator { position: static; display: block; margin: 1.5rem auto; opacity: 0.5; max-width: 80px; }
+.leaf-top { max-width: 200px; z-index: 0;} 
+.leaf-bottom { max-width: 350px; z-index: 0;}
+.leaf-circle-frame { max-width: 450px; opacity: 0.4;}
+.leaf-separator { position: static; display: block; margin: 1.5rem auto; opacity: 0.5; max-width: 100px; }
 .leaf-footer-left, .leaf-footer-right { max-width: 100px; opacity: 0.4;}
 .leaf-top { top: 10px; left: 50%; transform: translateX(-50%); }
-.leaf-bottom { bottom: 10px; left: 50%; transform: translateX(-50%); }
-.leaf-circle-frame { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.leaf-bottom { bottom: 25px; left: 50%; transform: translateX(-50%); }
+.leaf-circle-frame { top: 42%; left: 50%; transform: translate(-50%, -50%); }
 .leaf-swirl-top { top: 2rem; right: 1rem; }
 .leaf-swirl-bottom { bottom: 2rem; left: 1rem; }
 .leaf-top-right { top: 2.5rem; right: 0rem; }
 .leaf-bottom-left { bottom: 2.5rem; left: 0rem; }
 .leaf-footer-left { bottom: 1rem; left: 1rem; }
-.leaf-footer-right { top: 1rem; right: 1rem; }
+.leaf-footer-right { bottom: 1rem; right: 1rem; }
 .hero-section { padding: 2rem 1rem 3rem; position: relative; min-height: 70vh; display: flex; flex-direction: column; align-items: center; }
 .hero-image-container { width: 80%; max-width: 350px; margin-top: 3rem; margin-bottom: 3rem; position: relative; clip-path: ellipse(120% 100% at 50% 100%); overflow: hidden; z-index: 2; }
 .hero-photo { display: block; width: 100%; height: auto; }
