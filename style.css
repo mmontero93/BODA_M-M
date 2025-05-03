@@ -151,8 +151,8 @@ p { margin-bottom: 1rem; font-size: 0.95rem; }
 .leaf-separator { position: static; display: block; margin: 1.5rem auto; opacity: 0.5; max-width: 100px; }
 .leaf-footer-left, .leaf-footer-right { max-width: 100px; opacity: 0.4;}
 .leaf-top { top: 10px; left: 50%; transform: translateX(-50%); }
-.leaf-bottom-1 { bottom: 43px; right: 25%; transform: translateX(-50%); }
-.leaf-bottom-2 { bottom: 43px; left: 37%; transform: translateX(-50%); }
+.leaf-bottom-1 { bottom: 6%; right: 25%; transform: translateX(-50%); }
+.leaf-bottom-2 { bottom: 6%; left: 37%; transform: translateX(-50%); }
 .leaf-circle-frame { top: 42%; left: 50%; transform: translate(-50%, -50%); }
 .leaf-swirl-top { top: 2rem; right: 1rem; }
 .leaf-swirl-bottom { bottom: 2rem; left: 1rem; }
@@ -178,8 +178,8 @@ p { margin-bottom: 1rem; font-size: 0.95rem; }
 .icon-link-button { background: none; border: none; cursor: pointer; padding: 0; }
 .rsvp-section p { margin-bottom: 1.5rem; }
 .countdown-section { padding: 2rem 1rem 0; }
-.countdown-timer { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 0; flex-wrap: wrap; }
-.countdown-timer div { font-family: var(--font-serif); color: var(--color-text); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+.countdown-timer { display: flex; justify-content: center; gap: 0.8rem; margin-bottom: 0; flex-wrap: wrap; }
+.countdown-timer div { font-family: var(--font-serif); color: var(--color-text); font-size: 0.6rem; text-transform: uppercase; letter-spacing: 1px; }
 .countdown-timer span { display: block; font-size: 1rem; font-weight: 600; color: var(--color-headings); margin-bottom: 0.2rem; }
 .gift-section { padding-top: 3rem; }
 .gift-section h2 { margin-bottom: 1.5rem; }
