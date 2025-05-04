@@ -147,13 +147,13 @@ p { margin-bottom: 1rem; font-size: 0.95rem; }
 .leaf-top { max-width: 200px; z-index: 0;} 
 .leaf-bottom-1 { max-width: 350px; z-index: 0;}
 /*.leaf-bottom-2 { max-width: 100px; z-index: 0;}*/
-.leaf-circle-frame { max-width: 450px; opacity: 0.4;}
+.leaf-circle-frame { max-width: 300px; z-index: 0;}
 .leaf-separator { position: static; display: block; margin: 1.5rem auto; opacity: 0.5; max-width: 100px; }
 .leaf-footer-left, .leaf-footer-right { max-width: 100px; opacity: 0.4;}
 .leaf-top { top: 10px; left: 50%; transform: translateX(-50%); }
 .leaf-bottom-1 { bottom: 6%; left: 50%; transform: translateX(-50%); }
 /*.leaf-bottom-2 { bottom: 6%; right: 52%; transform: translateX(-50%); }*/
-.leaf-circle-frame { top: 42%; left: 50%; transform: translate(-50%, -50%); }
+.leaf-circle-frame { top: 50%; left: 50%; transform: translate(-50%, -50%); }
 .leaf-swirl-top { top: 2rem; right: 1rem; }
 .leaf-swirl-bottom { bottom: 2rem; left: 1rem; }
 .leaf-top-right { top: 2.5rem; right: 1rem; }
@@ -168,7 +168,7 @@ p { margin-bottom: 1rem; font-size: 0.95rem; }
 .hero-names { margin-top: -1rem; position: relative; z-index: 3; }
 .hero-names p { font-family: var(--font-serif); font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; color: #999; margin: 0; }
 .date-section { padding-top: 6rem; padding-bottom: 6rem; position: relative; }
-.initials-circle { width: 180px; height: 180px; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto 1.5rem auto; position: relative; z-index: 2; background-color: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
+.initials-circle { width: 300px; height: 300px; border-radius: 60%; display: flex; justify-content: center; align-items: center; margin: 0 auto 1.5rem auto; position: relative; z-index: 2; background-color: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
 .initials-circle span { font-family: var(--font-serif); font-size: 4.5rem; font-weight: 600; color: var(--color-headings); line-height: 1; margin: 0 0.2rem; }
 .date-text p { font-family: var(--font-serif); font-size: 1rem; font-weight: 400; letter-spacing: 1px; text-transform: uppercase; color: var(--color-text); margin-bottom: 0.2rem; position: relative; z-index: 2; }
 .invitation-section .script-text { font-size: 1.8rem; line-height: 1.6; color: var(--color-script); }
