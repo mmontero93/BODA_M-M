@@ -36,70 +36,41 @@ body {
     /* align-items: center; */
 }
 
-/* === INICIO: ESTILOS REVISADOS DEL SOBRE === */
-#envelope-container {
-    position: fixed; /* Fijado a la ventana */
-    top: 50%;        /* Centrado vertical */
-    left: 50%;       /* Centrado horizontal */
-    transform: translate(-50%, -50%); /* Ajuste fino para centrar */
-    width: 300px;
-    height: 200px;
+/* ========================================== */
+/* === INICIO: ESTILOS SPLASH SCREEN IMAGEN === */
+/* ========================================== */
+#splash-screen {
+    position: fixed; /* Cubre toda la ventana */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000; /* Encima de todo */
     cursor: pointer;
-    z-index: 1000;
-    transition: opacity 0.5s ease-out 0.6s, visibility 0s linear 1.1s, transform 0.5s ease-out 0.6s;
+    background-color: var(--color-splash-background); /* Fondo por si la imagen no cubre todo */
+
+    /* EDITAR: Cambia 'images/splash-sobre-abierto.png' por la ruta a TU imagen */
+    background-image: url('images/splash-sobre-abierto.png');
+
+    background-repeat: no-repeat;
+    background-position: center center; /* Centrar la imagen */
+    background-size: contain; /* Asegura que toda la imagen sea visible, puede dejar barras blancas */
+    /* Alternativa: background-size: cover; -> Cubre todo, pero puede cortar la imagen */
+
+    opacity: 1; /* Visible al inicio */
+    visibility: visible;
+    transition: opacity 0.5s ease-out, visibility 0s linear 0.5s; /* Fade out */
 }
 
-/* Estado oculto para el sobre después de abrir */
-#envelope-container.hidden {
+/* Estado oculto para el splash screen */
+#splash-screen.hidden {
     opacity: 0;
     visibility: hidden;
-    pointer-events: none;
-    transform: translate(-50%, -50%) scale(0.8); /* Mantener centrado al escalar */
+    pointer-events: none; /* No interferir con clics cuando está oculto */
 }
-
-.envelope-back {
-    position: absolute; bottom: 0; left: 0; width: 100%; height: 100%;
-    background-color: var(--color-envelope-back);
-    border-radius: 5px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    z-index: 1; /* Fondo */
-}
-
-.envelope-card {
-    position: absolute; bottom: 0; left: 5%; width: 90%; height: 95%;
-    background-color: var(--color-envelope-card);
-    border-radius: 3px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    z-index: 2; /* Encima del fondo del sobre */
-    padding: 20px 15px 15px 15px; /* Más padding superior para texto de solapa */
-    text-align: center; color: var(--color-envelope-text);
-    transition: transform 0.5s ease-out 0.3s;
-    overflow: hidden; /* Para asegurar que el contenido no se salga */
-}
-.envelope-card .card-greeting {font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 0.5rem;}
-.envelope-card .card-names {font-family: var(--font-script); font-size: 1.8rem; color: var(--color-script); margin-bottom: 1rem;}
-.envelope-card .card-subtitle {font-family: var(--font-script); font-size: 1.1rem; font-style: italic;}
-
-.envelope-flap {
-    position: absolute; top: 0; left: 0; width: 100%; height: 55%;
-    background-color: var(--color-envelope-flap);
-    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
-    z-index: 3; /* Encima de la tarjeta */
-    transform-origin: top center; transition: transform 0.6s ease-in-out;
-    display: flex; justify-content: center; align-items: flex-start; /* Alinear texto arriba */
-    padding-top: 15px; /* Espacio arriba para el texto */
-}
-
-.flap-text {
-    font-family: var(--font-serif); font-size: 0.9rem; color: var(--color-envelope-text);
-    opacity: 0.8; margin: 0;
-    transition: opacity 0.3s ease-out;
-    /* Quitar posicionamiento relativo 'top' */
-}
-
-/* Estado Abierto */
-#envelope-container.open .envelope-flap { transform: rotateX(-180deg); z-index: 0; } /* Poner solapa detrás */
-#envelope-container.open .flap-text { opacity: 0; }
-#envelope-container.open .envelope-card { transform: translateY(-25px); }
-/* === FIN: ESTILOS REVISADOS DEL SOBRE === */
+/* ======================================== */
+/* === FIN: ESTILOS SPLASH SCREEN IMAGEN === */
+/* ======================================== */
 
 
 /* === Wrapper Central (Contenido Principal) === */

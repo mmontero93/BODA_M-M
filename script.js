@@ -1,46 +1,53 @@
-// === INICIO: Script REVISADO para Abrir el Sobre y Música ===
-const envelopeContainer = document.getElementById('envelope-container');
+// ======================================================
+// === INICIO: Script para Splash Screen y Música ===
+// ======================================================
+const splashScreen = document.getElementById('splash-screen'); // ID del div del splash
 const contentWrapper = document.querySelector('.content-wrapper');
 const backgroundMusic = document.getElementById('background-music');
-// const bodyElement = document.body; // Ya no es necesario
+// const bodyElement = document.body; // Ya no se necesita manipular el body
 
-// Ocultar contenido principal inicialmente (asegurarse)
+// Ocultar contenido principal inicialmente
 if (contentWrapper) {
     contentWrapper.classList.add('hidden');
     contentWrapper.classList.remove('visible');
 } else {
-    console.error("Error: No se encontró el .content-wrapper");
+    console.error("Error Crítico: No se encontró el .content-wrapper");
 }
 
-if (envelopeContainer && contentWrapper && backgroundMusic) {
-    envelopeContainer.addEventListener('click', () => {
-        if (envelopeContainer.classList.contains('open')) return;
+if (splashScreen && contentWrapper && backgroundMusic) {
+    // Evento al hacer clic en el splash screen
+    splashScreen.addEventListener('click', () => {
+        // Prevenir múltiples clics
+        if (splashScreen.classList.contains('hidden')) {
+            return;
+        }
 
-        envelopeContainer.classList.add('open'); // Animar apertura
+        // 1. Ocultar el splash screen (con fade-out definido en CSS)
+        splashScreen.classList.add('hidden');
 
-        backgroundMusic.play().catch(error => { // Reproducir música
+        // 2. Intentar reproducir la música
+        backgroundMusic.play().catch(error => {
             console.error("Error al intentar reproducir la música:", error);
         });
 
-        setTimeout(() => {
-            envelopeContainer.classList.add('hidden'); // Ocultar sobre
-            // bodyElement.classList.add('content-visible'); // QUITAR esta línea
-            contentWrapper.classList.remove('hidden'); // Mostrar contenido
-            contentWrapper.classList.add('visible');
-            window.scrollTo(0, 0); // Scroll al inicio
-        }, 800); // Ajustar tiempo (ms)
+        // 3. Mostrar el contenido principal (con fade-in definido en CSS)
+        //    No se necesita timeout largo, las transiciones CSS se encargan
+        contentWrapper.classList.remove('hidden');
+        contentWrapper.classList.add('visible');
+        window.scrollTo(0, 0); // Scroll al inicio
 
-    }, { once: true });
+    }, { once: true }); // Ejecutar solo una vez
 } else {
-     console.error("Error: No se encontraron los elementos para el sobre interactivo.");
-     // Fallback: mostrar contenido si falla el sobre
+     console.error("Error Crítico: Faltan elementos esenciales para el splash screen interactivo.");
+     // Fallback: mostrar contenido si falla el splash
      if(contentWrapper){
-        // bodyElement.classList.add('content-visible'); // QUITAR esta línea
         contentWrapper.classList.remove('hidden');
         contentWrapper.classList.add('visible');
      }
 }
-// === FIN: Script REVISADO para Abrir el Sobre y Música ===
+// ====================================================
+// === FIN: Script para Splash Screen y Música ===
+// ====================================================
 
 
 // === Tu Script existente para el Contador Regresivo ===
