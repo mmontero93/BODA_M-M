@@ -106,7 +106,25 @@ body {
      /* No se necesita transition aquí, ya que empieza oculto */
 }
 
+.croquis-section {
+    /* Hereda padding horizontal de .section */
+    /* Ajustamos padding vertical para dar espacio */
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    text-align: center; /* Asegurar centrado si la imagen fuera inline-block */
+}
 
+.croquis-image {
+    display: block; /* Para poder usar margin: auto */
+    max-width: 100%; /* Evita que se desborde en pantallas pequeñas */
+    /* EDITAR: Ajusta el ancho máximo si quieres limitar su tamaño en pantallas grandes */
+    /* width: 500px; */
+    height: auto; /* Mantiene la proporción */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    /* Opcional: Añadir una sombra o borde ligero */
+    /*box-shadow: 0 2px 6px rgba(0,0,0,0.1); */
+    border-radius: 4px;
+}
 /* ... (Tus estilos existentes para h1, h2, p, section, leaf-art, etc. van aquí SIN CAMBIOS) ... */
 /* ... (Pegar aquí el resto de tus estilos desde h1 hasta el final, incluyendo media queries) ... */
 h1, h2, .script-text {font-family: var(--font-script); color: var(--color-script); font-weight: normal; margin-bottom: 1rem;}
