@@ -184,16 +184,40 @@
                 <p>
                     Lo más importante es<br>
                     tu presencia, pero<br>
-                    si quieres hacernos un regalo<br>
-                    puedes hacerlo en un sobre<br>
-                    o en esta cuenta
+                    si quieres hacernos un detalle...
+                    <!-- Cambiado 'regalo' por 'detalle' -->
                 </p>
-                 <!-- Tu IBAN -->
-                <p id="iban" class="iban-text">ES28 1583 0001 1491 0309 0287</p>
-                <button id="copy-iban-button" class="icon-link icon-link-button" title="Copiar IBAN">
-                    <span class="icon">📋</span> (clic para copiar)
-                </button>
+
+                <!-- Contenedor para las opciones (sin cambios) -->
+                <div class="gift-options-container">
+
+                    <!-- Opción Euros (sin encabezado "Opción Euros") -->
+                    <div class="gift-option">
+                        <div class="account-details">
+                            <span class="currency-symbol">€</span> 
+                            <p id="iban-data" class="account-info">ES28 1583 0001 1491 0309 0287</p>
+                            <button class="copy-button small-copy-button" data-clipboard-target="#iban-data" title="Copiar IBAN">
+                                📋 <span class="copy-button-text"></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Opción Dólares / Zelle (sin encabezado "Opción Dólares") -->
+                    <div class="gift-option">
+                         <div class="account-details">
+                            <!-- Símbolos Dólar y Zelle (puedes usar una imagen para Zelle si prefieres) -->
+                            <span class="currency-symbol">$ / Zelle</span>
+                            <!-- EDITAR: Tu email asociado a Zelle -->
+                            <p id="zelle-data" class="account-info">monterormj@gmail.com</p>
+                            <button class="copy-button small-copy-button" data-clipboard-target="#zelle-data" title="Copiar Email Zelle">📋 <span class="copy-button-text"></span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div> <!-- Fin gift-options-container -->
+
                 <img src="images/leaf-swirl-bottom.png" alt="" class="leaf-art leaf-swirl-bottom">
+                <!-- Feedback unificado -->
                 <span id="copy-feedback" class="copy-feedback"></span>
             </section>
 
