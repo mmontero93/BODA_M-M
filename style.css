@@ -169,21 +169,21 @@ body {
 }
 
 .currency-symbol {
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     font-weight: 600;
     color: var(--color-headings);
-    text-align: right;
+    text-align: left;
     padding-right: 0.5rem;
     /* Quitado min-width para mayor flexibilidad */
 }
 
 .account-info {
     font-family: var(--font-serif);
-    font-size: 0.95rem;
+    font-size: 0.8rem;
     font-weight: 400;
     color: var(--color-text);
     word-break: break-all;
-    text-align: left;
+    text-align: right;
     margin: 0;
 }
 
