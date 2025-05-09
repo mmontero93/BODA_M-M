@@ -106,6 +106,108 @@ body {
      /* No se necesita transition aquí, ya que empieza oculto */
 }
 
+.croquis-section {
+    /* Hereda padding horizontal de .section */
+    /* Ajustamos padding vertical para dar espacio */
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    text-align: center; /* Asegurar centrado si la imagen fuera inline-block */
+}
+
+.croquis-image {
+    display: block; /* Para poder usar margin: auto */
+    max-width: 100%; /* Evita que se desborde en pantallas pequeñas */
+    /* EDITAR: Ajusta el ancho máximo si quieres limitar su tamaño en pantallas grandes */
+    /* width: 500px; */
+    height: auto; /* Mantiene la proporción */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    /* Opcional: Añadir una sombra o borde ligero */
+    /*box-shadow: 0 2px 6px rgba(0,0,0,0.1); */
+    border-radius: 4px;
+}
+/* === INICIO: NUEVOS ESTILOS SECCIÓN REGALO (SÍMBOLOS) === */
+/* Quitar regla para .gift-option h3 si existía */
+
+.gift-section {
+    /* === CAMBIO AQUÍ: Aumentar padding inferior === */
+    padding-bottom: 8rem; /* Más espacio abajo para la hoja (ajusta si es necesario) */
+    /* =========================================== */
+    padding-top: 3rem; /* Mantenemos o ajustamos el superior */
+    position: relative; /* Contexto para z-index y hojas */
+    z-index: 5; /* Asegurar que el contenido general esté en un nivel base */
+}
+
+.gift-section h2 {
+    margin-bottom: 1.5rem;
+}
+.gift-section > p { /* Párrafo introductorio */
+    margin-bottom: 2.5rem;
+}
+
+.gift-options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+    /* === CAMBIO AQUÍ: Padding lateral y z-index === */
+    padding-left: 20%;  /* Más espacio a la izquierda */
+    padding-right: 10%; /* Espacio también a la derecha por simetría */
+    position: relative;  /* Necesario para z-index */
+    z-index: 10;         /* Asegurar que este contenedor esté sobre las hojas */
+    /* ========================================== */
+}
+
+/* La regla .gift-option se puede eliminar si no tiene estilos */
+
+.account-details {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 0.8rem;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.currency-symbol {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-headings);
+    text-align: left;
+    padding-right: 0.5rem;
+    /* Quitado min-width para mayor flexibilidad */
+}
+
+.account-info {
+    font-family: var(--font-serif);
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--color-text);
+    word-break: break-all;
+    text-align: right;
+    margin: 0;
+}
+
+.small-copy-button {
+    background: none; border: none;
+    color: var(--color-icon); cursor: pointer;
+    padding: 0.1rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: color 0.2s ease;
+    line-height: 1;
+    margin-left: 0.5rem;
+}
+.small-copy-button .copy-button-text {
+    display: none;
+}
+.small-copy-button:hover {
+    color: var(--color-headings);
+}
+
+.copy-feedback {
+    display: block; margin-top: 1.5rem; font-size: 0.8rem;
+    color: green; height: 1em; min-height: 1em;
+}
 
 /* ... (Tus estilos existentes para h1, h2, p, section, leaf-art, etc. van aquí SIN CAMBIOS) ... */
 /* ... (Pegar aquí el resto de tus estilos desde h1 hasta el final, incluyendo media queries) ... */
@@ -154,11 +256,8 @@ p { margin-bottom: 1rem; font-size: 0.95rem; }
 .countdown-timer { display: flex; justify-content: center; gap: 0.8rem; margin-bottom: 0; flex-wrap: wrap; }
 .countdown-timer div { font-family: var(--font-serif); color: var(--color-text); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; }
 .countdown-timer span { display: block; font-size: 1.5rem; font-weight: 600; color: var(--color-headings); margin-bottom: 0.2rem; }
-.gift-section { padding-top: 3rem; }
-.gift-section h2 { margin-bottom: 1.5rem; }
-.gift-section p { margin-bottom: 1.5rem; }
 .iban-text { font-family: var(--font-serif); font-size: 1.1rem; font-weight: 600; color: var(--color-headings); margin-bottom: 1rem; letter-spacing: 1px; }
-.copy-feedback { display: block; margin-top: 0.5rem; font-size: 0.8rem; color: green; height: 1em; }
+.copy-feedback { display: block; margin-top: 1rem; font-size: 0.8rem; color: green; height: 1em; min-height: 1em; }
 .itinerary-list { list-style: none; padding: 0; margin: 0; display: inline-block; text-align: left; }
 .itinerary-list li { margin-bottom: 1rem; font-size: 0.95rem; display: flex; align-items: center; }
 .itinerary-list .icon { font-size: 1.5rem; margin-right: 1rem; color: var(--color-icon); width: 25px; text-align: center; }
@@ -167,7 +266,9 @@ p { margin-bottom: 1rem; font-size: 0.95rem; }
 .footer-names { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 600; letter-spacing: 2px; color: var(--color-headings); text-transform: uppercase; margin-bottom: 0.5rem; }
 .footer-message { font-family: var(--font-serif); font-size: 0.9rem; color: var(--color-text); letter-spacing: 1px; }
 .footer-section .leaf-art { opacity: 0.4; }
-
+.small-copy-button { background: none; border: none; color: var(--color-icon); cursor: pointer; padding: 0.3rem 0.5rem; font-size: 0.9rem; font-family: var(--font-serif); border-radius: 4px; transition: background-color 0.2s ease, color 0.2s ease; display: inline-flex; align-items: center; gap: 0.3rem; }
+.small-copy-button:hover { background-color: #eee; color: var(--color-headings); }
+.small-copy-button .copy-button-text { @media (max-width: 400px) { display: none; } }
 
 /* === Responsividad === */
 /* QUITAR Media query para body.content-visible si ya no se usa */
@@ -180,5 +281,29 @@ p { margin-bottom: 1rem; font-size: 0.95rem; }
     .envelope-card .card-names { font-size: 1.5rem;}
     .flap-text { font-size: 0.8rem; }
     /* ... (resto de tus estilos responsivos) ... */
-     body { font-size: 15px; } h1 { font-size: 2rem; } h2 { font-size: 2.5rem; } .section { padding: 2.5rem 1rem; } .hero-image-container { width: 90%; margin-top: 2rem; margin-bottom: 2rem;} .leaf-art { max-width: 100px; } .leaf-top { max-width: 200px; } .leaf-bottom-1 { max-width: 350px; } .leaf-circle-frame { max-width: 250px; } .initials-circle { width: 250px; height: 250px; } .initials-circle span { font-size: 3rem; } .invitation-section .script-text { font-size: 1.5rem; } .countdown-section { padding: 1.5rem 1rem 0; } .countdown-timer { gap: 0.5rem;} .countdown-timer div { margin-bottom: 0.5rem; } .countdown-timer span { font-size: 1rem; } .gift-section { padding-top: 2rem; } .itinerary-list { display: block; text-align: center;} .itinerary-list li { justify-content: center;} .footer-names { font-size: 1rem; } .footer-message { font-size: 0.8rem; } .leaf-footer-left, .leaf-footer-right { max-width: 80px; } .leaf-top-right, .leaf-bottom-left { max-width: 90px;}
+     body { font-size: 15px; } h1 { font-size: 2rem; } h2 { font-size: 2.5rem; } .section { padding: 2.5rem 1rem; } .hero-image-container { width: 90%; margin-top: 2rem; margin-bottom: 2rem;} .leaf-art { max-width: 95px; } .leaf-top { max-width: 200px; } .leaf-bottom-1 { max-width: 350px; } .leaf-circle-frame { max-width: 250px; } .initials-circle { width: 250px; height: 250px; } .initials-circle span { font-size: 3rem; } .invitation-section .script-text { font-size: 1.5rem; } .countdown-section { padding: 1.5rem 1rem 0; } .countdown-timer { gap: 0.5rem;} .countdown-timer div { margin-bottom: 0.5rem; } .countdown-timer span { font-size: 1rem; } .gift-section { padding-top: 2rem; } .itinerary-list { display: block; text-align: center;} .itinerary-list li { justify-content: center;} .footer-names { font-size: 1rem; } .footer-message { font-size: 0.8rem; } .leaf-footer-left, .leaf-footer-right { max-width: 80px; } .leaf-top-right, .leaf-bottom-left { max-width: 70px;}
+     .gift-section {
+        padding-bottom: 6rem; /* Mantener o ajustar padding inferior en móvil */
+    }
+    .gift-options-container {
+        padding-left: 20%; /* Menos padding lateral en móvil */
+        padding-right: 15px;
+    }
+    /* ... (Tus otros ajustes responsivos para .account-details, etc.) ... */
+     .account-details {
+        grid-template-columns: auto 1fr auto;
+        gap: 0.5rem;
+     }
+     .currency-symbol {
+         font-size: 0.75rem;
+         padding-right: 0.3rem;
+         text-align: left; /* Alinear a la izquierda en móvil si se prefiere */
+     }
+    .account-info {
+        font-size: 0.75rem;
+    }
+    .small-copy-button {
+        font-size: 0.9rem;
+    }
+
 }

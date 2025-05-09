@@ -37,9 +37,12 @@
     <meta name="twitter:description" content="¡Estás invitado/a! Descubre todos los detalles de nuestra boda y confirma tu asistencia.">
     <meta name="twitter:image" content="https://mmontero93.github.io/BODA_M-M/images/logo03.png">
 
+    <!-- Evitar la detección de formato de Telefono -->
+    <meta name="format-detection" content="telephone=no">
+
     <!-- === FIN: Open Graph / Meta Tags para Vista Previa === -->
     <!-- Título (Ya editado por ti) -->
-    <title>Nuestra Boda - Maria & Mauricio</title>
+    <title>Nuestra Boda - Ma. Fernanda & Mauricio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -99,7 +102,7 @@
                 <div class="date-text">
                     <!-- Tu fecha y hora -->
                     <p>VIERNES 3 DE OCTUBRE</p>
-                    <p>DE 2025 | 18:30h</p>
+                    <p>DE 2025 | 18:00h</p>
                 </div>
             </section>
 
@@ -120,7 +123,7 @@
             <section id="ceremonia" class="section event-section">
                 <img src="images/leaf-top-right.png" alt="" class="leaf-art leaf-top-right">
                 <h2>Ceremonia</h2>
-                <p class="venue-name">PARROQUIA DE <br>SANTA CRSITINA</p>
+                <p class="venue-name">PARROQUIA DE <br>SANTA CRISTINA</p>
                 <img src="images/leaf-separator.png" alt="" class="leaf-art leaf-separator">
                 <p class="address">
                     Paseo de Extremadura 32,<br>
@@ -128,7 +131,7 @@
                     18:00 h
                 </p>
                 <a href="https://www.google.com/maps/place/Parish+of+St+Christina/@40.4136247,-3.7279009,18.29z/data=!4m6!3m5!1s0xd42280a24334a39:0xb7c893884bc48ce4!8m2!3d40.413907!4d-3.728242!16s%2Fg%2F11bwdr1dz6?entry=ttu&g_ep=EgoyMDI1MDQyMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="icon-link">
-                    <span class="icon">📍</span> (clic)
+                    <span class="icon">📍</span> (click)
                 </a>
                 <img src="images/leaf-bottom-left.png" alt="" class="leaf-art leaf-bottom-left">
             </section>
@@ -145,19 +148,24 @@
                     19:00 h
                 </p>
                 <a href="https://www.google.com/maps/place/Casa+de+Burgos/@40.4145994,-3.7306093,19z/data=!4m6!3m5!1s0xd422809aacbec27:0x55c51b64e7649f83!8m2!3d40.4144639!4d-3.7308012!16s%2Fg%2F11bwg45zdr?entry=ttu&g_ep=EgoyMDI1MDQyMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="icon-link">
-                    <span class="icon">📍</span> (clic)
+                    <span class="icon">📍</span> (click)
                 </a>
                 <img src="images/leaf-swirl-bottom.png" alt="" class="leaf-art leaf-swirl-bottom">
             </section>
+
+            <section class="section croquis-section">
+                <!-- EDITAR: Cambia 'images/croquis-completo.png' por la ruta y nombre exactos de TU imagen -->
+               <img src="images/croquis-completo.png" alt="Croquis mostrando distancia entre ceremonia y celebración" class="croquis-image">
+           </section>
 
             <!-- === Sección RSVP (Pag 6) === -->
             <section id="rsvp" class="section rsvp-section">
                 <img src="images/leaf-top-right.png" alt="" class="leaf-art leaf-top-right">
                 <h2>Confirmar asistencia</h2>
                  <!-- EDITAR: Pon tu fecha límite y enlace de Google Form -->
-                <p>Haz clic en el sobre para<br>confirmar tu presencia antes del<br> [FECHA LIMITE]</p>
-                <a href="[ENLACE_A_TU_GOOGLE_FORM]" target="_blank" class="icon-link">
-                    <span class="icon">✉️</span> (clic)
+                <p>Haz click en el sobre para<br>confirmar tu presencia antes del<br> 03-08-2025</p>
+                <a href="https://forms.gle/bCfkw3Fiu7BpuPY97" target="_blank" class="icon-link">
+                    <span class="icon">✉️</span> (click)
                 </a>
                 <img src="images/leaf-bottom-left.png" alt="" class="leaf-art leaf-bottom-left">
             </section>
@@ -179,16 +187,41 @@
                 <p>
                     Lo más importante es<br>
                     tu presencia, pero<br>
-                    si quieres hacerme un regalo<br>
-                    puedes hacerlo en un sobre<br>
-                    o en esta cuenta
+                    si quieres hacernos un detalle...
+                    <!-- Cambiado 'regalo' por 'detalle' -->
                 </p>
-                 <!-- Tu IBAN -->
-                <p id="iban" class="iban-text">ES11 1111 2222 3333 4444 5555 6666</p>
-                <button id="copy-iban-button" class="icon-link icon-link-button" title="Copiar IBAN">
-                    <span class="icon">📋</span> (clic para copiar)
-                </button>
+
+                <!-- Contenedor para las opciones (sin cambios) -->
+                <div class="gift-options-container">
+
+                    <!-- Opción Euros (sin encabezado "Opción Euros") -->
+                    <div class="gift-option">
+                        <div class="account-details">
+                            <span class="currency-symbol">€</span> 
+                            <p id="iban-data" class="account-info">ES28 1583 0001 1491 0309 0287</p>
+                            <button class="copy-button small-copy-button" data-clipboard-target="#iban-data" title="Copiar IBAN">
+                                📋 <span class="copy-button-text"></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Opción Dólares / Zelle (sin encabezado "Opción Dólares") -->
+                    <div class="gift-option">
+                         <div class="account-details">
+                            <!-- Símbolos Dólar y Zelle (puedes usar una imagen para Zelle si prefieres) -->
+                            <span class="currency-symbol">$/Zelle</span>
+                            <!-- EDITAR: Tu email asociado a Zelle -->
+                            <p id="zelle-data" class="account-info">monterormj@gmail.com</p>
+                            <button class="copy-button small-copy-button" data-clipboard-target="#zelle-data" title="Copiar Email Zelle">
+                                📋 <span class="copy-button-text"></span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div> <!-- Fin gift-options-container -->
+
                 <img src="images/leaf-swirl-bottom.png" alt="" class="leaf-art leaf-swirl-bottom">
+                <!-- Feedback unificado -->
                 <span id="copy-feedback" class="copy-feedback"></span>
             </section>
 
@@ -198,11 +231,11 @@
                 <h2>Itinerario</h2>
                  <!-- Tu itinerario -->
                 <ul class="itinerary-list">
-                    <li><span class="icon">⛪</span> 20:00 h - Ceremonia</li>
-                    <li><span class="icon">🥂</span> 21:00 h - Recepción</li>
-                    <li><span class="icon">🍽️</span> 22:30 h - Cena</li>
-                    <li><span class="icon">🎶</span> 00:30 h - Apertura del baile</li>
-                    <li><span class="icon">🚌</span> 06:00 h - Fin de fiesta</li>
+                    <li><span class="icon">⛪</span> 18:00 h - Ceremonia</li>
+                    <li><span class="icon">🥂</span> 19:30 h - Cóctel</li>
+                    <li><span class="icon">🍽️</span> 21:30 h - Cena</li>
+                    <li><span class="icon">🎶</span> 23:30 h - Apertura del baile</li>
+                    <li><span class="icon">🚕</span> 03:30 h - Fin de fiesta</li>
                 </ul>
                 <img src="images/leaf-bottom-left.png" alt="" class="leaf-art leaf-bottom-left">
             </section>
@@ -216,12 +249,12 @@
                     toma muchas fotos<br>
                     y déjanos un bonito<br>
                     y divertido recuerdo<br>
-                    haciendo clic en el icono<br>
-                    de la camara de fotos
+                    haciendo click en el icono<br>
+                    de la cámara de fotos
                 </p>
                  <!-- EDITAR: Tu enlace para fotos -->
-                <a href="[ENLACE_PARA_SUBIR_O_VER_FOTOS]" target="_blank" class="icon-link">
-                    <span class="icon">📷</span> (clic)
+                <a href="https://web.dotstheapp.com/a?groupId=1887230&code=oYLBjlPa&dlBy=maria_fernanda6648&utm_source=guest&utm_medium=share&utm_campaign=guest_event_album" target="_blank" class="icon-link">
+                    <span class="icon">📷</span> (click)
                 </a>
                 <img src="images/leaf-swirl-bottom.png" alt="" class="leaf-art leaf-swirl-bottom">
             </section>
@@ -231,7 +264,7 @@
         <!-- === Sección Final (Pag 10) === -->
         <footer class="footer-section">
             <img src="images/leaf-footer-left.png" alt="" class="leaf-art leaf-footer-left">
-            <p class="footer-names">MARIA FERNANDA & MAURICIO</p>
+            <p class="footer-names">MA. FERNANDA & MAURICIO</p>
             <p class="footer-message">♥ TE ESPERAMOS ♥</p>
             <img src="images/leaf-footer-right.png" alt="" class="leaf-art leaf-footer-right">
         </footer>
